@@ -1,0 +1,88 @@
+@use 'reset';
+@use 'mixin' as m;
+
+/* ================================
+   Design Tokens (:root)
+================================ */
+:root {
+  /* --- Colors --- */
+  --color-bg:           #f6f4ef;
+  --color-border:       #dcd3c2;
+  --color-border-light: #e7e6e1;
+  --color-purple:       #8b6bae;
+  --color-plum:         #827dbd;
+  --color-text-dark:    #332b24;
+  --color-text-gray:    #8a8478;
+  --color-text-muted:   #9c9a92;
+  --color-text-body:    #454442;
+
+  /* --- Fonts --- */
+  --font-en:    'Inter', sans-serif;
+  --font-ja:    'Zen Kaku Gothic New', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-mono:  'Space Mono', monospace;
+  --font-noto:  'Noto Sans JP', sans-serif;
+
+  /* --- Font sizes --- */
+  --fs-label:      1.4rem;
+  --fs-small:      1.0rem;
+  --fs-small-xs:   1.2rem;
+  --fs-body:       1.6rem;
+  --fs-heading-ja: 3.2rem;
+  --fs-number-sm:  4.0rem;
+  --fs-number-lg:  6.4rem;
+
+  /* --- Letter spacing --- */
+  --ls-label:  0.112em;
+  --ls-number: 0.128em;
+
+  /* --- Spacing --- */
+  --space-xs:  8px;
+  --space-sm:  14px;
+  --space-md:  16px;
+  --space-lg:  20px;
+  --space-xl:  24px;
+  --space-2xl: 27px;
+
+  /* --- Shape --- */
+  --border-radius:        10px;
+  --border-radius-pill:   50px;
+  --border-radius-circle: 99px;
+  --border-width:         1.111px;
+
+  /* --- Shadow --- */
+  --shadow-btn: -2px -2px 5px 0px rgba(255, 255, 255, 0.7),
+                 3px  3px  8px 0px rgba(180, 170, 155, 0.18);
+}
+
+/* ================================
+   Base
+================================ */
+body {
+  font-family: var(--font-en);
+  background-color: var(--color-bg);
+  color: var(--color-text-dark);
+  font-size: var(--fs-body);
+}
+
+/* ================================
+   Layout
+================================ */
+.portfolio-top {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+.portfolio-top__slide {
+  position: absolute;
+  left: var(--space-lg);
+  top: var(--space-lg);
+  width: 1224px;
+  height: 984px;
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}

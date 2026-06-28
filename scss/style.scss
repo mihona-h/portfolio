@@ -1,0 +1,7 @@
+// エントリーポイント: すべてのSCSSをまとめてimport
+@use 'base';
+@use 'sections/heading';
+@use 'sections/works-grid';
+@use 'parts/work-card';
+@use 'parts/skills-list';
+@use 'parts/contact-btn';

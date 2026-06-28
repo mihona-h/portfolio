@@ -1,0 +1,58 @@
+@use '../mixin' as m;
+
+/* ================================
+   Part: Contact Button
+================================ */
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xl);
+  padding-right: 20px;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--border-radius-pill);
+  flex-shrink: 0;
+  cursor: pointer;
+  text-decoration: none;
+  @include m.hover-transition(box-shadow);
+
+  &:hover {
+    box-shadow: var(--shadow-btn);
+  }
+
+  &__icon {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: var(--border-radius-pill);
+    background-color: var(--color-bg);
+    box-shadow: var(--shadow-btn);
+    flex-shrink: 0;
+  }
+
+  &__text {
+    font-family: var(--font-en);
+    font-size: var(--fs-small-xs);
+    font-weight: 400;
+    color: var(--color-text-dark);
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+  }
+}
+
+/* ================================
+   Part: View Button
+================================ */
+.view-btn {
+  display: block;
+  background-color: var(--color-bg);
+  border-radius: var(--border-radius-pill);
+  box-shadow: var(--shadow-btn);
+  width: 107px;
+  height: 45px;
+  cursor: pointer;
+  @include m.hover-transition(box-shadow);
+
+  &:hover {
+    box-shadow: none;
+  }
+}

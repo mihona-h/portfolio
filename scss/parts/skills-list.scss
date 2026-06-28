@@ -1,0 +1,41 @@
+@use '../mixin' as m;
+
+/* ================================
+   Part: Skills List
+================================ */
+.skills-list {
+  width: 266px;
+  flex-shrink: 0;
+
+  &__label {
+    @include m.font-label;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    @include m.flex-col;
+    gap: var(--space-md);
+  }
+
+  &__row {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+  }
+
+  &__category {
+    font-size: var(--fs-small-xs);
+    color: var(--color-text-gray);
+    line-height: 1.4;
+    width: 48px;
+    flex-shrink: 0;
+  }
+
+  &__tools {
+    font-size: var(--fs-small-xs);
+    color: var(--color-text-gray);
+    line-height: 1.4;
+    flex: 1;
+  }
+}

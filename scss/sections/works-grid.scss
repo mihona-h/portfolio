@@ -1,0 +1,100 @@
+@use '../mixin' as m;
+
+/* ================================
+   Section: Works Grid (中央グリッド)
+================================ */
+.works-grid {
+  @include m.flex-col;
+  gap: var(--space-md);
+  height: 984px;
+  width: 701px;
+  flex-shrink: 0;
+
+  &__row {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  &__col {
+    @include m.flex-col;
+    align-items: center;
+    flex-shrink: 0;
+    width: 342px;
+  }
+
+  /* ---- 横長カード (work3) ---- */
+  &__wide {
+    position: relative;
+    height: 399px;
+    width: 701px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--color-border);
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .work-card__number {
+      @include m.font-number(var(--fs-number-lg));
+      position: absolute;
+      bottom: 70px;
+      right: 45px;
+    }
+
+    .work-card__meta {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 342px;
+    }
+  }
+}
+
+/* ================================
+   Aside: Works (右縦長カード)
+================================ */
+.works-aside {
+  position: absolute;
+  top: var(--space-lg);
+  left: 1258px;
+  width: 507px;
+  height: 984px;
+
+  &__image-wrap {
+    @include m.card-base;
+    height: 822px;
+    width: 507px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__meta {
+    position: absolute;
+    top: 822px;
+    left: 0;
+    width: 342px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--space-sm);
+  }
+
+  &__view-btn {
+    position: absolute;
+    top: 929px;
+    left: 387px;
+  }
+}

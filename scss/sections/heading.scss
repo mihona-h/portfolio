@@ -1,0 +1,136 @@
+@use '../mixin' as m;
+
+/* ================================
+   Section: Heading (左パネル)
+================================ */
+.heading {
+  background-color: var(--color-bg);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--space-2xl);
+  width: 507px;
+  height: 984px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+
+  /* ---- Top: ロゴ + アバター ---- */
+  &__top {
+    @include m.flex-between;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+
+  &__logo {
+    @include m.font-label;
+    line-height: 1;
+  }
+
+  &__avatar {
+    width: 45.99px;
+    height: 45.99px;
+    border-radius: var(--border-radius-circle);
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: -4.51px;
+      left: -6.24px;
+      width: 53px;
+      height: 51px;
+      object-fit: cover;
+    }
+  }
+
+  /* ---- Middle: キャッチコピー + scroll ---- */
+  &__main {
+    @include m.flex-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__copy {
+    position: relative;
+    width: 387px;
+    height: 146px;
+    flex-shrink: 0;
+  }
+
+  &__heading-ja {
+    font-family: var(--font-ja);
+    font-size: var(--fs-heading-ja);
+    font-weight: 500;
+    color: var(--color-text-body);
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__subtext {
+    font-family: var(--font-ja);
+    font-size: var(--fs-body);
+    font-weight: 300;
+    color: var(--color-text-body);
+    line-height: 1.5;
+    position: absolute;
+    top: 100.36px;
+    left: 0;
+  }
+
+  &__scroll {
+    font-family: var(--font-en);
+    font-size: var(--fs-label);
+    font-weight: 400;
+    color: var(--color-plum);
+    letter-spacing: var(--ls-label);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ---- Bottom: スキル + フッター ---- */
+  &__bottom {
+    @include m.flex-col;
+    gap: var(--space-md);
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+
+  &__divider {
+    border: none;
+    border-top: var(--border-width) solid var(--color-text-muted);
+    width: 100%;
+  }
+
+  &__footer {
+    @include m.flex-between;
+    align-items: flex-end;
+    padding: 0 var(--space-xs);
+    width: 100%;
+  }
+
+  &__works-count {
+    @include m.flex-col;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 56px;
+    padding: 2px 0;
+    letter-spacing: 0.8px;
+    flex-shrink: 0;
+  }
+
+  &__works-number {
+    @include m.font-number(4rem);
+  }
+
+  &__works-label {
+    font-family: var(--font-en);
+    font-size: var(--fs-small);
+    font-weight: 400;
+    color: var(--color-text-gray);
+    white-space: nowrap;
+  }
+}

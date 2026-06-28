@@ -1,0 +1,99 @@
+@use '../mixin' as m;
+
+/* ================================
+   Part: Work Card
+================================ */
+.work-card {
+  @include m.flex-col;
+  position: relative;
+  flex-shrink: 0;
+
+  /* ---- 画像エリア ---- */
+  &__image-wrap {
+    @include m.card-base;
+    width: 100%;
+    height: 407px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  /* ---- 番号 ---- */
+  &__number {
+    @include m.font-number(var(--fs-number-lg));
+    position: absolute;
+    bottom: 70px;
+    pointer-events: none;
+
+    &--left  { left:  295px; transform: translateX(-50%); }
+    &--right { right:  44px; transform: translateX(50%);  }
+  }
+
+  /* ---- メタ情報エリア ---- */
+  &__meta {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--space-sm);
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    position: relative;
+    width: 314px;
+    height: 51px;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    font-family: var(--font-noto);
+    font-size: var(--fs-body);
+    font-weight: 400;
+    color: var(--color-text-dark);
+    line-height: 1.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__category {
+    font-family: var(--font-mono);
+    font-size: var(--fs-small);
+    color: var(--color-text-gray);
+    line-height: 1.2;
+    position: absolute;
+    top: 23px;
+    left: 0;
+  }
+
+  &__goal {
+    font-family: var(--font-mono);
+    font-size: var(--fs-small);
+    color: var(--color-text-gray);
+    line-height: 1.2;
+    position: absolute;
+    top: 39px;
+    left: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__arrow {
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

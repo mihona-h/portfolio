@@ -1,0 +1,81 @@
+/* ================================
+   Breakpoints
+================================ */
+$bp-sm: 600px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+$bp-2xl: 1440px;
+
+@mixin mq-down($bp) {
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin mq-up($bp) {
+  @media screen and (min-width: $bp) {
+    @content;
+  }
+}
+
+/* ================================
+   Flex
+================================ */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================================
+   Components
+================================ */
+@mixin card-base {
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin hover-transition($prop: all, $duration: 0.3s) {
+  transition: $prop $duration ease;
+}
+
+/* ================================
+   Typography
+================================ */
+@mixin font-label {
+  font-family: var(--font-en);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  color: var(--color-purple);
+  font-weight: 400;
+}
+
+@mixin font-number($size: var(--fs-number-lg)) {
+  font-family: var(--font-serif);
+  font-size: $size;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: var(--ls-number);
+  color: var(--color-plum);
+  line-height: 1;
+}

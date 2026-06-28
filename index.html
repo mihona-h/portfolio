@@ -1,19 +1,203 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mihona Hirata Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Inter:wght@400&family=Noto+Sans+JP:wght@400&family=Space+Mono:wght@400&family=Zen+Kaku+Gothic+New:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mihona Hirata Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Inter:wght@400&family=Noto+Sans+JP:wght@400&family=Space+Mono:wght@400&family=Zen+Kaku+Gothic+New:wght@300;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="portfolio-top">
+  <div class="portfolio-top__slide">
+
+    <!-- =============================================
+         Section: Heading (左パネル)
+    ============================================== -->
+    <section class="heading" aria-label="プロフィール">
+
+      <!-- Top: ロゴ + アバター -->
+      <div class="heading__top">
+        <p class="heading__logo">
+          MIHONA<br>
+          HIRATA<br>
+          PORTFOLIO
+        </p>
+        <div class="heading__avatar">
+          <img src="assets/placeholder-avatar.svg" alt="Mihona Hirata">
+        </div>
+      </div>
+
+      <!-- Middle: キャッチコピー + scroll -->
+      <div class="heading__main">
+        <div class="heading__copy">
+          <p class="heading__heading-ja">
+            寄り添って、<br>
+            つくる。
+          </p>
+          <p class="heading__subtext">
+            Webデザイン・コーディング<br>
+            設計から実装まで、丁寧につくります。
+          </p>
+        </div>
+        <p class="heading__scroll">scroll →</p>
+      </div>
+
+      <!-- Bottom: スキル + フッター -->
+      <div class="heading__bottom">
+
+        <!-- Part: Skills List -->
+        <div class="skills-list">
+          <span class="skills-list__label">SKILLS</span>
+          <ul class="skills-list__items">
+            <li class="skills-list__row">
+              <span class="skills-list__category">デザイン</span>
+              <span class="skills-list__tools">Figma / Canva</span>
+            </li>
+            <li class="skills-list__row">
+              <span class="skills-list__category">フロント</span>
+              <span class="skills-list__tools">HTML / CSS / Sass / JavaScript / jQuery / PHP</span>
+            </li>
+            <li class="skills-list__row">
+              <span class="skills-list__category">CMS</span>
+              <span class="skills-list__tools">WordPress</span>
+            </li>
+            <li class="skills-list__row">
+              <span class="skills-list__category">運用</span>
+              <span class="skills-list__tools">Git / GitHub / VSCode</span>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="heading__divider">
+
+        <div class="heading__footer">
+          <!-- Part: Contact Button -->
+          <a href="#contact" class="contact-btn">
+            <span class="contact-btn__icon" aria-hidden="true"></span>
+            <span class="contact-btn__text">CONTACT</span>
+          </a>
+
+          <div class="heading__works-count">
+            <span class="heading__works-number">04</span>
+            <span class="heading__works-label">WORKS</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- /Section: Heading -->
+
+
+    <!-- =============================================
+         Section: Works Grid (中央グリッド)
+    ============================================== -->
+    <div class="works-grid" aria-label="制作実績">
+
+      <!-- 上段: Work 01 / Work 02 -->
+      <div class="works-grid__row">
+
+        <!-- Work 01 -->
+        <div class="works-grid__col">
+          <div class="work-card">
+            <div class="work-card__image-wrap">
+              <img src="assets/placeholder-work.svg" alt="コーポレートサイト">
+              <span class="work-card__number work-card__number--left">01</span>
+            </div>
+            <div class="work-card__meta">
+              <div class="work-card__info">
+                <p class="work-card__title">コーポレートサイト</p>
+                <p class="work-card__category">WEB / UI·UX</p>
+                <p class="work-card__goal">
+                  <span class="work-card__arrow"><img src="assets/arrow.svg" alt=""></span>
+                  求人のお問い合わせを増やす
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work 02 -->
+        <div class="works-grid__col">
+          <div class="work-card">
+            <div class="work-card__image-wrap">
+              <img src="assets/placeholder-work.svg" alt="コーポレートサイト">
+              <span class="work-card__number work-card__number--right">02</span>
+            </div>
+            <div class="work-card__meta">
+              <div class="work-card__info">
+                <p class="work-card__title">コーポレートサイト</p>
+                <p class="work-card__category">WEB / UI·UX</p>
+                <p class="work-card__goal">
+                  <span class="work-card__arrow"><img src="assets/arrow.svg" alt=""></span>
+                  求人のお問い合わせを増やす
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /上段 -->
+
+      <!-- 下段: Work 03 (横長) -->
+      <div class="works-grid__wide">
+        <img src="assets/placeholder-wide.svg" alt="コーポレートサイト">
+        <span class="work-card__number">03</span>
+        <div class="work-card__meta">
+          <div class="work-card__info">
+            <p class="work-card__title">コーポレートサイト</p>
+            <p class="work-card__category">WEB / UI·UX</p>
+            <p class="work-card__goal">
+              <span class="work-card__arrow"><img src="assets/arrow.svg" alt=""></span>
+              求人のお問い合わせを増やす
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- /下段 -->
+
+    </div>
+    <!-- /Section: Works Grid -->
+
+  </div>
+</main>
+
+
+<!-- =============================================
+     Section: Works Aside (右縦長カード / Work 04)
+     ※ portfolio-top の外に出してabsolute配置
+============================================== -->
+<aside class="works-aside" aria-label="制作実績 4">
+
+  <div class="works-aside__image-wrap">
+    <img src="assets/placeholder-tall.svg" alt="コーポレートサイト">
+  </div>
+
+  <div class="works-aside__meta">
+    <div class="work-card__info">
+      <p class="work-card__title">コーポレートサイト</p>
+      <p class="work-card__category">WEB / UI·UX</p>
+      <p class="work-card__goal">
+        <span class="work-card__arrow"><img src="assets/arrow.svg" alt=""></span>
+        求人のお問い合わせを増やす
+      </p>
+    </div>
+  </div>
+
+  <!-- Part: View Button -->
+  <div class="works-aside__view-btn">
+    <a href="#work04" class="view-btn" aria-label="View work"></a>
+  </div>
+
+</aside>
+<!-- /Section: Works Aside -->
+
+</body>
 </html>
