@@ -1,0 +1,121 @@
+@use '../mixin' as m;
+
+.works-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  height: 901px;
+  width: 701px;
+  flex-shrink: 0;
+
+  &__row {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 342px;
+  }
+
+  /* Top two work cards share same height */
+  .work-card--top {
+    .work-card__image-wrap {
+      height: 407px;
+    }
+
+    .work-card__number {
+      right: 43.89px;
+      transform: translateX(50%) translateY(100%);
+    }
+
+    &:first-child {
+      .work-card__number {
+        right: auto;
+        left: 295.89px;
+        transform: translateX(-50%) translateY(100%);
+      }
+    }
+  }
+
+  /* Wide bottom card */
+  &__wide {
+    position: relative;
+    height: 399px;
+    width: 701px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--color-border);
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+      transform: scaleY(-1) rotate(180deg);
+    }
+
+    .work-card__number {
+      @include m.font-number(6.4rem);
+      position: absolute;
+      bottom: 11px;
+      left: 656px;
+      transform: translateX(-50%) translateY(100%);
+    }
+
+    .work-card__meta {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 342px;
+    }
+  }
+}
+
+/* Right column (4th work) */
+.works-aside {
+  position: absolute;
+  height: 901px;
+  left: 1258px;
+  top: 20px;
+  width: 507px;
+
+  &__image-wrap {
+    @include m.card-base;
+    height: 822px;
+    width: 507px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--border-radius);
+    }
+  }
+
+  &__meta {
+    position: absolute;
+    top: 822px;
+    left: 0;
+    width: 342px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--space-sm);
+  }
+
+  &__view-btn {
+    position: absolute;
+    top: 929px;
+    left: 387px;
+  }
+}
